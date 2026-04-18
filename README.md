@@ -67,3 +67,26 @@ GET /api/users/:id
 ```bash
 npm install
 node src/app.js
+
+
+
+### Example Response
+
+{
+  "message": "Simulation completed",
+  "logs": [
+    {
+      "from": "user1@gmail.com",
+      "to": "user2@gmail.com"
+    }
+  ]
+}
+
+
+## Project Structure
+
+src/
+ ├── models
+ ├── controllers
+ ├── routes
+ └── app.js

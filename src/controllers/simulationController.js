@@ -14,7 +14,7 @@ const startSimulation = async (req, res) => {
     for (let i = 0; i < users.length; i++) {
       let sender = users[i];
 
-      // 🔥 daily limit reset + increase
+      // daily limit reset + increase
       const today = new Date();
       const last = new Date(sender.lastReset);
 
@@ -28,7 +28,7 @@ const startSimulation = async (req, res) => {
 
       let receiver = users[(i + 1) % users.length];
 
-      // ✅ await inside async function (correct)
+      //  await inside async function (correct)
       await EmailLog.create({
         sender: sender.email,
         receiver: receiver.email
